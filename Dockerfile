@@ -144,4 +144,4 @@ RUN set -xe; \
         \
 
 EXPOSE 9000
-CMD ["/usr/local/php/sbin/php-fpm"]    
+CMD ["/usr/local/php/sbin/php-fpm"]
