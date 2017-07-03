@@ -41,9 +41,9 @@ ENV PHPIZE_DEPS \
 
 ENV PHP_DIR /usr/local/php \
     PHP_INI_DIR /etc \
-    PHP_VERSION php-7.0.20 \
-    PHP_URL http://cn2.php.net/distributions/php-7.0.20.tar.gz \
-    MCRYPT_URL wget ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/attic/libmcrypt/libmcrypt-2.5.7.tar.gz
+    PHP_VERSION php-7.0.20
+ENV PHP_URL="http://cn2.php.net/distributions/php-7.0.20.tar.gz"
+ENV MCRYPT_URL="ftp://mcrypt.hellug.gr/pub/crypto/mcrypt/attic/libmcrypt/libmcrypt-2.5.7.tar.gz"
 
 RUN set -xe ; \
 	CONFIGURE_PAR=" \
