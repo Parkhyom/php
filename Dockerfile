@@ -119,7 +119,7 @@ RUN set -xe ; \
 	yum install -y $PHPIZE_DEPS wget curl net-tools; \
 	\
 	wget $PHP_URL; \
-	wget $MCRYPT; \
+	wget $MCRYPT_URL; \
 	tar -zxvf -zxvf libmcrypt-2.5.7.tar.gz && cd -zxvf libmcrypt-2.5.7 && ./config --prefix=/usr/local; \
 	make && make install && cd; \
 	tar -zxvf php-7.0.20.tar.gz && cd php-7.0.20; \
