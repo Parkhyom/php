@@ -14,7 +14,7 @@ ENV PHPIZE_DEPS \
 		libmcrypt4 \
 		libmcrypt-devel \
 		php-mcrypt \ 
-    libmcrypt \
+    		libmcrypt \
 		libmcrypt-devel \
 		gd \
 		build-essential \
