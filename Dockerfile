@@ -120,7 +120,7 @@ RUN set -xe ; \
 	\
 	wget $PHP_URL; \
 	wget $MCRYPT_URL; \
-	tar -zxvf -zxvf libmcrypt-2.5.7.tar.gz && cd -zxvf libmcrypt-2.5.7 && ./config --prefix=/usr/local; \
+	tar -zxvf libmcrypt-2.5.7.tar.gz && cd libmcrypt-2.5.7 && ./config --prefix=/usr/local; \
 	make && make install && cd; \
 	tar -zxvf php-7.0.20.tar.gz && cd php-7.0.20; \
 	sed -i '6d' /root/.bashrc && su -c "cp -frp /usr/lib64/libldap* /usr/lib/"; \
@@ -138,6 +138,8 @@ RUN set -xe ; \
 	\
 	#delete temp-configuration file
 	yum autoremove -y $PHPIZE_DEPS && yum clean all; \
+	cd && cd php-7.0.20 && make distclean; \
+	cd && cd libmcrypt-2.5.7 && make distclean; \
 	cd && rm -rf * \
 	\
 
